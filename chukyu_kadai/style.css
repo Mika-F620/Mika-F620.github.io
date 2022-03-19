@@ -1,0 +1,369 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:not(body) {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a img {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/*Sass*/
+/*全体*/
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/*ヘッダー*/
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  padding: 10px 0;
+}
+
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+nav ul li {
+  margin-right: 5%;
+}
+
+@media (max-width: 767px) {
+  nav ul li {
+    margin-bottom: 5px;
+  }
+  nav ul li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*ピックアップ*/
+div#pickup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  div#pickup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+div#pickup div {
+  margin-right: 2%;
+}
+
+div#pickup div:last-child {
+  margin-right: 0;
+}
+
+div#pickup div p span {
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+}
+
+div#pickup div p span a {
+  display: inline-block;
+  font-size: 13px;
+  border-bottom: 1px solid #333;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  #container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#container main {
+  width: 70%;
+  margin-right: 4%;
+}
+
+@media (max-width: 767px) {
+  #container main {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+#container main div {
+  margin-bottom: 70px;
+}
+
+#container main div h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#container main div h2 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+#container main div p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#container main div p.font {
+  width: 100%;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+#container main div p.font a {
+  margin-right: 3%;
+}
+
+#container main div p span {
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+}
+
+#container main div p span a {
+  display: inline-block;
+  font-size: 13px;
+  border-bottom: 1px solid #333;
+}
+
+#container main div a img {
+  margin-bottom: 10px;
+}
+
+#container aside {
+  width: 30%;
+}
+
+@media (max-width: 767px) {
+  #container aside {
+    width: 100%;
+  }
+}
+
+#container aside div {
+  margin-bottom: 60px;
+}
+
+#container aside div h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#container aside div p {
+  font-size: 14px;
+}
+
+#container aside div.author img {
+  border-radius: 50%;
+  width: 50%;
+  margin: 0 auto 40px;
+}
+
+#container aside div.ranking img {
+  margin-bottom: 5px;
+}
+
+#container aside div.ranking a p {
+  margin-bottom: 20px;
+}
+
+#container aside div dl dt {
+  border-top: 1px solid #333;
+  padding: 20px 15px;
+  font-size: 13px;
+}
+
+#container aside div dl dt:last-child {
+  border-bottom: 1px solid #333;
+}
+
+footer {
+  background-color: #f7f7f7;
+  padding: 60px 0 0;
+}
+
+footer div.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  footer div.wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer div.wrapper div {
+  width: 30%;
+  margin-right: 5%;
+}
+
+@media (max-width: 767px) {
+  footer div.wrapper div {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+footer div.wrapper div:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767px) {
+  footer div.wrapper div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+footer div.wrapper div h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+footer div.wrapper div p {
+  margin-bottom: 15px;
+}
+
+footer div.wrapper div div {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  footer div.wrapper div div {
+    margin-bottom: 0;
+  }
+}
+
+footer div.wrapper div div a {
+  display: inline;
+}
+
+footer div.wrapper div dl dt {
+  border-top: 1px solid #333;
+  padding: 15px;
+}
+
+footer div.wrapper div dl dt:last-child {
+  border-bottom: 1px solid #333;
+}
+
+footer p.copyright {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=style.css.map */

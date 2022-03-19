@@ -1,0 +1,308 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:not(body) {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  a img {
+    border: none;
+  }
+  button {
+    cursor: pointer;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+th,
+td {
+  text-align: left;
+  vertical-align: middle;
+}  
+input,
+select {
+  vertical-align: middle;
+}
+input[type="submit"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  $sp: 767px;  // スマホ
+  
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+/*Sass*/
+/*全体*/
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+/*ヘッダー*/
+header{
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  margin-bottom: 40px;
+
+  h1{
+    padding: 10px 0;
+  }
+}
+nav{
+  background-color: #333;
+  ul{
+    display: flex;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+    @include sp{
+      flex-direction: column;
+    }
+
+    li{
+      margin-right: 5%;
+      @include sp{
+        margin-bottom: 5px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/*ピックアップ*/
+div{
+    &#pickup{
+    display: flex;
+    margin-bottom: 50px;
+    @include sp{
+      flex-direction: column;
+    }
+
+    div{
+      margin-right: 2%;
+
+      &:last-child{
+        margin-right: 0;
+      }
+      p{
+
+        span{
+          text-align: center;
+          display: block;
+          padding: 10px 0;
+
+          a{
+            display: inline-block;
+            font-size: 13px;
+            border-bottom: 1px solid #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+#container{
+  display: flex;
+  @include sp{
+    flex-direction: column;
+  }
+
+  main{
+    width: 70%;
+    margin-right: 4%;
+    @include sp{
+      width: 100%;
+      margin-right: 0;
+    }
+  
+  div{
+    margin-bottom: 70px;
+    h2{
+      font-size: 22px;
+      margin-bottom: 10px;
+
+      a{
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+    p{
+      width: 90%;
+      margin: 0 auto;
+
+      &.font{
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 5px;
+        a{
+          margin-right: 3%;
+         }
+      }
+      span{
+          text-align: center;
+          display: block;
+          padding: 10px 0;
+          a{
+            display: inline-block;
+            font-size: 13px;
+            border-bottom: 1px solid #333;
+          }
+       }
+    }
+    a{
+      img{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+aside{
+  width: 30%;
+  @include sp{
+    width: 100%;
+  }
+  div{
+    margin-bottom: 60px;
+    h2{
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    p{
+      font-size: 14px;
+    }
+    &.author{
+
+      img{
+        border-radius: 50%;
+        width: 50%;
+        margin: 0 auto 40px;
+      }
+    }
+    &.ranking{
+      img{
+        margin-bottom: 5px;
+      }
+      a{
+        p{
+          margin-bottom: 20px;
+        }
+      }
+    }
+    dl{
+      dt{
+        border-top: 1px solid #333;
+        padding: 20px 15px;
+        font-size: 13px;
+        &:last-child{
+          border-bottom: 1px solid #333;
+        }
+      }
+    }
+  }
+}
+}
+footer{
+  background-color: #f7f7f7;
+  padding: 60px 0 0;
+  div{
+    &.wrapper{
+      display: flex;
+      font-size: 14px;
+      margin-bottom: 50px;
+      @include sp{
+        flex-direction: column;
+      }
+    
+      div{
+        width: 30%;
+        margin-right: 5%;
+        @include sp{
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 40px;
+        }
+        &:last-child{
+        margin-right: 0;
+        @include sp{
+          margin-bottom: 0;
+        }
+        }
+        h2{
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+        p{
+          margin-bottom: 15px;
+        }
+        div{
+          width: 100%;
+          @include sp{
+            margin-bottom: 0;
+          }
+          a{
+            display: inline;
+          }
+        }
+        dl{
+          dt{
+            border-top: 1px solid #333;
+            padding: 15px;
+            &:last-child{
+              border-bottom: 1px solid #333;
+            }
+          }
+        }
+      }
+    }
+  }
+p{
+  &.copyright{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+} 
+}
+
