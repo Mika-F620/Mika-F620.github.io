@@ -112,6 +112,17 @@ header nav ul li:last-child {
   margin-right: 0;
 }
 
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #e03131;
+}
+
 header h1 {
   position: absolute;
   top: 50%;
@@ -265,7 +276,7 @@ main h3 {
 }
 
 main h3 span {
-  border-bottom: 6px solid #E03131;
+  border-bottom: 6px solid #e03131;
 }
 
 main section#about {
@@ -352,24 +363,24 @@ main section#about a p.read {
 }
 
 main section#about a p.read:before, main section#about a p.read:after {
-  content: '';
+  content: "";
   width: 30px;
   height: 25px;
   position: absolute;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 main section#about a p.read:before {
-  border-left: 2px solid #E03131;
-  border-top: 2px solid #E03131;
+  border-left: 2px solid #e03131;
+  border-top: 2px solid #e03131;
   top: 0;
   left: 0;
 }
 
 main section#about a p.read:after {
-  border-right: 2px solid #E03131;
-  border-bottom: 2px solid #E03131;
+  border-right: 2px solid #e03131;
+  border-bottom: 2px solid #e03131;
   bottom: 0;
   right: 0;
 }
