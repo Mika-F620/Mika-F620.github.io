@@ -66,10 +66,16 @@ input[type="submit"] {
 
 /*Sass*/
 /*全体*/
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media (max-width: 767px) {
@@ -195,6 +201,7 @@ main section div.fixed-background {
 @media (max-width: 767px) {
   main section div.fixed-background {
     min-height: 18vh;
+    background-attachment: unset;
   }
 }
 
@@ -397,6 +404,7 @@ main section#location div.background-3 {
 main section#location iframe {
   width: 100%;
   margin-bottom: 20px;
+  /*https://webty.jp/staffblog/production/post-3679/ で著作権違反可能性ありと記載*/
 }
 
 main section#location p {

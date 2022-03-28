@@ -63,10 +63,15 @@ $sp: 767px; // スマホ
 
 /*Sass*/
 /*全体*/
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   @include sp {
     width: 90%;
@@ -167,6 +172,7 @@ main {
 
         @include sp {
           min-height: 18vh;
+          background-attachment: unset;
         }
       }
     }
@@ -355,6 +361,12 @@ main {
       iframe {
         width: 100%;
         margin-bottom: 20px;
+        /*https://webty.jp/staffblog/production/post-3679/ で著作権違反可能性ありと記載*/
+        // -webkit-filter: grayscale(100%);
+        // -moz-filter: grayscale(100%);
+        // -ms-filter: grayscale(100%);
+        // -o-filter: grayscale(100%);
+        // filter: grayscale(100%);
       }
       p {
         font-size: 14px;
