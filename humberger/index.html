@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>ハンバーガーメニュー実装</title>
+  <meta name="description" content="ハンバーガーメニューの解説デモサイトです" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="img/humberger-favicon.png" />
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">
+      <a href="#"><img src="img/humburger-logo-b.png" alt="ハンバーガーメニュー実装" /></a>
+    </h1>
+    <!-- ハンバーガーメニューのナビゲーション -->
+<nav id="hamburger-navigation">
+  <img src="img/humberger-logo-w.png" alt="ハンバーガーメニュー実装" />
+  <ul class="sections">
+    <li>
+      <a href="#about" class="humberger-menu-section">About</a>
+    </li>
+    <li><a href="#service" class="humberger-menu-section">Service</a></li>
+    <li>
+      <a href="#works" class="humberger-menu-section">Works</a>
+    </li>
+    <!--追加-->
+    <li>
+      <a href="#contact" class="humberger-menu-section">Contact</a>
+    </li>
+  </ul>
+</nav>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </header>
+
+  <main>
+    <!-- ファーストビュー -->
+    <div id="firstview">
+      <img src="img/undraw_Hamburger_8ge6.png" alt="" />
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <img src="img/undraw_about_me_wa29.png" alt="" />
+    </section>
+
+    <!-- Service -->
+    <section id="service">
+      <h2 class="section-title">Service</h2>
+      <img src="img/undraw_services_5tv9.png" alt="" />
+    </section>
+    <!-- Works -->
+    <section id="works">
+      <h2 class="section-title">Works</h2>
+      <img src="img/undraw_Working_re_ddwy.png" alt="" />
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <img src="img/undraw_Working_re_ddwy.png" alt="" />
+    </section>
+  </main>
+  <footer id="footer">
+    <p class="copyright">&copy; ハンバーガーメニュー実装</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
