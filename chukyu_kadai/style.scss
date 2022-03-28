@@ -63,10 +63,15 @@ $sp: 767px; // スマホ
 
 /*Sass*/
 /*全体*/
+body {
+  font-family: "Noto Serif JP", serif;
+}
 .wrapper {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   max-width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 a {
   color: #333;
@@ -78,6 +83,8 @@ header {
   top: 0;
   background-color: #fff;
   margin-bottom: 40px;
+  font-family: "Noto Serif", serif;
+  z-index: 10;
 
   h1 {
     padding: 10px 0;
@@ -128,9 +135,28 @@ div {
           padding: 10px 0;
 
           a {
+            font-family: "Noto Serif", serif;
             display: inline-block;
             font-size: 13px;
-            border-bottom: 1px solid #333;
+            position: relative;
+
+            &::after {
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              content: "";
+              width: 100%;
+              height: 1px;
+              transition: 0.3s;
+              background-color: #333;
+            }
+
+            &:hover {
+              &::after {
+                transform: translateY(4px);
+                opacity: 0;
+              }
+            }
           }
         }
       }
@@ -181,9 +207,28 @@ div {
           display: block;
           padding: 10px 0;
           a {
+            font-family: "Noto Serif", serif;
             display: inline-block;
             font-size: 13px;
-            border-bottom: 1px solid #333;
+            position: relative;
+
+            &::after {
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              content: "";
+              width: 100%;
+              height: 1px;
+              transition: 0.3s;
+              background-color: #333;
+            }
+
+            &:hover {
+              &::after {
+                transform: translateY(4px);
+                opacity: 0;
+              }
+            }
           }
         }
       }
@@ -200,9 +245,10 @@ div {
     @include sp {
       width: 100%;
     }
-    div {
+    article {
       margin-bottom: 60px;
       h2 {
+        font-family: "Noto Serif", serif;
         text-align: center;
         font-weight: bold;
         margin-bottom: 30px;
@@ -267,6 +313,7 @@ footer {
           }
         }
         h2 {
+          font-family: "Noto Serif", serif;
           font-size: 18px;
           font-weight: bold;
           margin-bottom: 30px;
@@ -285,6 +332,7 @@ footer {
         }
         dl {
           dt {
+            font-family: "Noto Serif", serif;
             border-top: 1px solid #333;
             padding: 15px;
             &:last-child {

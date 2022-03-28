@@ -66,10 +66,16 @@ input[type="submit"] {
 
 /*Sass*/
 /*全体*/
+body {
+  font-family: "Noto Serif JP", serif;
+}
+
 .wrapper {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   max-width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 a {
@@ -84,6 +90,8 @@ header {
   top: 0;
   background-color: #fff;
   margin-bottom: 40px;
+  font-family: "Noto Serif", serif;
+  z-index: 10;
 }
 
 header h1 {
@@ -157,9 +165,28 @@ div#pickup div p span {
 }
 
 div#pickup div p span a {
+  font-family: "Noto Serif", serif;
   display: inline-block;
   font-size: 13px;
-  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+div#pickup div p span a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #333;
+}
+
+div#pickup div p span a:hover::after {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  opacity: 0;
 }
 
 #container {
@@ -226,9 +253,28 @@ div#pickup div p span a {
 }
 
 #container main div p span a {
+  font-family: "Noto Serif", serif;
   display: inline-block;
   font-size: 13px;
-  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+#container main div p span a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #333;
+}
+
+#container main div p span a:hover::after {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  opacity: 0;
 }
 
 #container main div a img {
@@ -245,41 +291,42 @@ div#pickup div p span a {
   }
 }
 
-#container aside div {
+#container aside article {
   margin-bottom: 60px;
 }
 
-#container aside div h2 {
+#container aside article h2 {
+  font-family: "Noto Serif", serif;
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-#container aside div p {
+#container aside article p {
   font-size: 14px;
 }
 
-#container aside div.author img {
+#container aside article.author img {
   border-radius: 50%;
   width: 50%;
   margin: 0 auto 40px;
 }
 
-#container aside div.ranking img {
+#container aside article.ranking img {
   margin-bottom: 5px;
 }
 
-#container aside div.ranking a p {
+#container aside article.ranking a p {
   margin-bottom: 20px;
 }
 
-#container aside div dl dt {
+#container aside article dl dt {
   border-top: 1px solid #333;
   padding: 20px 15px;
   font-size: 13px;
 }
 
-#container aside div dl dt:last-child {
+#container aside article dl dt:last-child {
   border-bottom: 1px solid #333;
 }
 
@@ -329,6 +376,7 @@ footer div.wrapper div:last-child {
 }
 
 footer div.wrapper div h2 {
+  font-family: "Noto Serif", serif;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -353,6 +401,7 @@ footer div.wrapper div div a {
 }
 
 footer div.wrapper div dl dt {
+  font-family: "Noto Serif", serif;
   border-top: 1px solid #333;
   padding: 15px;
 }
