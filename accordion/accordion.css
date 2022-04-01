@@ -29,6 +29,6 @@
   padding: 30px 0;
 }
 /* JSで変更を加えるスタイル */
-.display-none {
-  display: none !important;
+.display-none{
+  display: none;
 }
