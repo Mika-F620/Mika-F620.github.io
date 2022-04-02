@@ -120,13 +120,17 @@ header {
                     top: 10px;
                     left: 0px;
                     background: #fff;
-                    transform: rotate(-45deg);
+                    transform: rotate(-315deg);
                 }
-                &:nth-child(2),
+                &:nth-child(2){
+                    top: 10px;
+                    background: #fff;
+                    opacity: 0;
+                }
                 &:nth-child(3) {
                     top: 10px;
                     background: #fff;
-                    transform: rotate(45deg);
+                    transform: rotate(315deg);
                 }
             }
         }
