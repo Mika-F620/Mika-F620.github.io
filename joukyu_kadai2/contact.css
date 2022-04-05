@@ -504,6 +504,12 @@ header #hamburger-navigation .menu li:last-child {
   font-family: 'Montserrat Medium';
 }
 
+#contact .disable-auto-tel a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+}
+
 footer {
   background-color: #525252;
   font-size: 10px;

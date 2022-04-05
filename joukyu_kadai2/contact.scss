@@ -477,6 +477,12 @@ header {
             font-family: 'Montserrat Medium';
         }
     }
+
+    .disable-auto-tel a[href^="tel:"] {
+        color: inherit;
+        text-decoration: none;
+        pointer-events: none;
+      }
 }
 
 footer {
