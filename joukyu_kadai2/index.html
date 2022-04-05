@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGSMILE INC.</title>
+    <!--Webフォント-->
+    <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="background"></div>
+        <div class="main">
+            <img src="img/main.png" alt="メインビジュアル">
+            <div class="catch">
+                <p>デザインで人を笑顔にする会社</p>
+                <p>DIGSMILE INC.</p>
+                <p>DESIGN<br>FOR<br>SMILE.</p>
+            </div>
+        </div>
+
+        <!--ヘッダーコンテンツ-->
+        <div class="header-contents">
+            <h1 class="logo"><img src="img/site-logo.svg" alt="DIGSMILE INC."></h1>
+            <div class="hum_button">
+                <!--ハンバーガーメニュー-->
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="hum_menu">MENU</p>
+
+            </div>
+            <nav id="hamburger-navigation">
+                <img src="img/icon.svg" alt="アイコン">
+                <ul class="menu">
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#culture">CULTURE</a></li>
+                    <li><a href="#topics">TOPICS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <!--ABOUT US-->
+        <section id="about" class="scroll_bg">
+            <div class="card">
+                <h2>ABOUT US</h2>
+                <p>DIGSMILEは、デザインで人を笑顔にする会社。<br>なんでもない日常に少しのワクワクと遊び心を提供します。笑顔には世界を変える力がある、デザインには人を幸せにする力がある。毎日に幸せを感じて生きていきたい。<br>DIGSMILEの社名にはそんな想いが込められています。
+                </p>
+                <button>READ MORE</button>
+            </div>
+
+        </section>
+        <!--Works&Culture-->
+        <section id="works_culture">
+            <div class="works_culture_flex wrapper">
+                <div id="works">
+                    <h2>WORKS</h2>
+                    <figure>
+                        <img src="img/works-img.png" alt="Works画像">
+                        <figcaption>DIGSMILEの制作実績を紹介します。</figcaption>
+                    </figure>
+                    <button>READ MORE</button>
+                </div>
+                <div id="culture">
+                    <h2>Culture</h2>
+                    <figure>
+                        <img src="img/culture-img.png" alt="Culture画像">
+                        <figcaption>DIGSMILEの社内文化について紹介します。</figcaption>
+                    </figure>
+                    <button>READ MORE</button>
+                </div>
+            </div>
+        </section>
+        <!--Latest topics-->
+        <section id="topics" class="wrapper">
+            <h2>LATEST TOPICS</h2>
+            <div>
+                <dl>
+                    <dt>2020.02.01</dt>
+                    <dd>イベントレポート「VRクリエイター座談会 〜5Gの次に来るもの〜」</dd>
+                    <dt>2020.01.18</dt>
+                    <dd>プレスリリースのお知らせ DIGGIN’ RECORDS</dd>
+                    <dt>2020.01.01</dt>
+                    <dd>新年明けましておめでとうございます</dd>
+                </dl>
+                <button>READ MORE</button>
+            </div>
+        </section>
+        <!--Contact-->
+        <section id="contact">
+            <div class="contact_flex wrapper">
+                <div>
+                    <h2>CONTACT</h2>
+                    <p>制作の依頼、取材の依頼、IRや採用についての連絡・お問い合わせはコンタクトページから承っております。<br>まずはお気軽にご連絡ください。担当者から改めて返信いたします。</p>
+                    <button>READ MORE</button>
+                </div>
+                <div><img src="img/recruit-img.png" alt="お問い合わせ画像"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;2018 DIGSMILE INC.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

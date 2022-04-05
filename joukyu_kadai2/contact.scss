@@ -1,0 +1,489 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:not(body) {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a img {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+$tb: 1024px; // タブレット
+
+@mixin tb {
+    @media (max-width: ($tb)) {
+        @content;
+    }
+}
+
+$sp: 599px; // スマホ
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+/*Sass*/
+/*全体*/
+body {
+    line-height: 1.7;
+    letter-spacing: 0.07em;
+    font-family: 'Montserrat', 'Noto Sans JP', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+
+    @include sp {
+        width: 95%;
+    }
+}
+
+header {
+    position: relative;
+    height: 29rem;
+    margin-bottom: 120px;
+
+    @include tb {
+        height: 70vh;
+        margin-bottom: 135px;
+    }
+
+    @include sp{
+        margin-bottom: 80px;
+     }
+
+    .background {
+        position: absolute;
+        background-color: #222;
+        width: 54%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+
+    .main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 76%;
+        height: 83%;
+        background-color: #000000;
+
+        img {
+            opacity: 0.7;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .header-contents {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 58px;
+        align-items: center;
+        z-index: 999;
+
+        @include tb {
+            padding: 37px 30px;
+        }
+
+        @include sp {
+            padding: 24px 15px;
+        }
+
+        .logo {
+            width: 260px;
+
+            @include tb {
+                width: 25%;
+            }
+
+            @include sp {
+                width: 50%;
+            }
+        }
+
+        .hum_button {
+            display: flex;
+            color: #fff;
+            font-size: 14px;
+
+            @include sp {
+                font-size: 10px;
+            }
+
+            p {
+                z-index: 21;
+                padding-left: 9px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .catch {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        color: #fff;
+        font-weight: bold;
+        transform: translate(50%, -50%);
+
+        @include sp {
+            right: -70px;
+            left: auto;
+            transform: translate(0%, -50%);
+        }
+
+        p {
+            &:nth-child(1) {
+                font-size: 72px;
+                line-height: 1.1;
+
+                @include tb {
+                    font-size: 45px;
+                }
+
+                @include sp {
+                    font-size: 52px;
+                    white-space: nowrap;
+                }
+
+            }
+
+            &:nth-child(2) {
+                font-family: 'Noto Sans JP Bold';
+                font-size: 20px;
+
+                @include tb {
+                    font-size: 16px;
+                }
+            }
+
+
+        }
+    }
+
+    .bg {
+        background-color: #121212;
+    }
+
+    /*ハンバーガーメニュー*/
+
+    .hamburger-menu {
+        display: block;
+        width: 30px;
+        height: 22px;
+        top: 0;
+        right: 0;
+        z-index: 30;
+        cursor: pointer;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        position: relative;
+
+        span {
+            width: 30px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2) {
+                top: 10px;
+            }
+
+            &:nth-child(3) {
+                top: 20px;
+            }
+        }
+
+        &.active {
+            span {
+                &:nth-child(1) {
+                    top: 10px;
+                    left: 0px;
+                    background: #fff;
+                    transform: rotate(-30deg);
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    top: 10px;
+                    background: #fff;
+                    transform: rotate(30deg);
+                }
+            }
+        }
+    }
+
+    #hamburger-navigation {
+        width: 520px;
+        height: 100vh;
+        background-color: #121212;
+        color: #121212;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        z-index: 20;
+        opacity: 0;
+        text-align: center;
+        -webkit-transition: opacity 0.8s ease, visibility 0.8s ease;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        visibility: hidden;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        padding: 180px 30px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            right: 0px;
+        }
+
+        img {
+            margin: 0 auto 40px;
+        }
+
+        .menu {
+            text-align: center;
+
+            a {
+                color: #fff;
+            }
+
+            li {
+                margin-bottom: 30px;
+                font-size: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+}
+#contact {
+    width: 50%;
+    margin-bottom: 120px;
+
+    @include tb{
+        width: 90%;
+        margin-bottom: 197px;
+    }
+    @include sp{
+       width: 95%;
+       margin-bottom: 80px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .first {
+        margin-bottom: 52px;
+        font-family: 'Noto Sans JP';
+    }
+
+    .second {
+        font-family: 'Noto Sans JP Bold';
+        margin-bottom: 18px;
+    }
+
+    span {
+        padding: 1px 5px;
+        background-color: #333333;
+        color: #fff;
+        margin-left: 20px;
+
+        @include sp{
+            margin-left: 10px;
+         }
+    }
+
+    label {
+        font-family: 'Noto Sans JP Bold';
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        border: 1px solid #333333;
+        width: 100%;
+        height: 41px;
+    }
+
+    .radio {
+        font-family: 'YuGothic';
+        margin-bottom: 45px;
+
+        @include tb{
+            margin-bottom: 37px;
+         }
+
+        label {
+            margin-right: 50px;
+
+            @include sp{
+                display: block;
+                margin-right: 0;
+             }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .block {
+        margin-bottom: 45px;
+
+        @include tb{
+            margin-bottom: 37px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    textarea {
+        border: 1px solid #333333;
+        width: 100%;
+        height: 212px;
+        resize: none;
+    }
+
+    .privacy {
+        p {
+            &:nth-child(1) {
+                margin-bottom: 10px;
+            }
+
+            &:nth-child(2) {
+                border: 1px solid #333333;
+                overflow: scroll;
+                height: 252px;
+                padding: 10px;
+                font-family: 'Noto Sans JP';
+                margin-bottom: 45px;
+
+                @include tb{
+                    margin-bottom: 37px;
+                }
+            }
+        }
+
+        .check {
+            text-align: center;
+            font-family: 'Noto Sans JP';
+            margin-bottom: 41px;
+            @include tb{
+                margin-bottom: 37px;
+            }
+        }
+    }
+
+    .button {
+        text-align: center;
+
+        button {
+            padding: 9px 66px;
+            background-color: #000000;
+            color: #fff;
+            font-family: 'Montserrat Medium';
+        }
+    }
+}
+
+footer {
+    background-color: #525252;
+    font-size: 10px;
+    font-family: 'Montserrat Medium';
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+}
