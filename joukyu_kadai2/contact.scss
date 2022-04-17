@@ -464,6 +464,16 @@ header {
             @include tb{
                 margin-bottom: 37px;
             }
+
+            @include sp{
+                display: flex;
+                align-items: baseline;
+                justify-self: center;
+                .agree{
+                    display: inline-block;
+                    text-align: left;
+                }
+            }
         }
     }
 

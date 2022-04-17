@@ -33,7 +33,7 @@
 
     // headerをスクロールすると、背景色が付く
     jQuery(window).on('scroll', function () {
-        if (jQuery('.scroll_bg').height() < jQuery(this).scrollTop()) {
+        if (jQuery('.scroll_bg').offset().top < jQuery(this).scrollTop()) {
             jQuery('.header-contents').addClass('bg');
         } else {
             jQuery('.header-contents').removeClass('bg');

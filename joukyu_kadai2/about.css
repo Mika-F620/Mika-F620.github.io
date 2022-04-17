@@ -367,7 +367,7 @@ h3 {
 
 @media (max-width: 1024px) {
   #vision {
-    padding: 0 120px;
+    padding: 0 95px;
     margin-bottom: 80px;
   }
 }
@@ -391,6 +391,12 @@ h3 {
 
 #vision p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 599px) {
+  #vision p br {
+    display: none;
+  }
 }
 
 #ceo {
