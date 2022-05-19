@@ -381,6 +381,10 @@ button {
   }
 }
 
+#about a{
+  color:#fff;
+}
+
 #about .card {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 50px 30px;
@@ -550,7 +554,9 @@ button {
     padding: 40px 0;
   }
 }
-
+#contact a{
+  color:#fff;
+}
 #contact .contact_flex {
   display: -webkit-box;
   display: -ms-flexbox;
