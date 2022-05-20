@@ -1,0 +1,126 @@
+$tb: 1024px; // タブレット
+
+@mixin tb {
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+$sp: 768px; // スマホ
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+.others_mv{
+        background-color: #F1F6FA;
+        min-height: 60vh;
+        display: flex;
+}
+.works_category{
+  margin-bottom: 80px;
+  @include sp {
+    display: flex;
+    justify-content: center;
+  }
+
+  li{
+    width: 140px;
+    border-radius: 24px;
+    text-align: center;
+    padding: 5px 20px;
+    margin-right: 30px;
+    background-color: #fff;
+    border: 1px solid #234872;
+    color: #234872;
+
+    @include sp {
+      margin-right: 3%;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.works_category li.current{
+  background: #234872;
+  color: #fff;
+}
+.works_line{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include sp {
+    flex-direction: column;
+  }
+
+  a{
+    color: #000;
+  }
+}
+.works_line_card{
+  width: 45%;
+  margin-right: 10%;
+  margin-bottom: 80px;
+  @include sp {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  &:nth-child(even){
+    margin-right: 0;
+  }
+  .works_line_kinds{
+    font-size: 18px;
+  }
+  .works_line_title{
+    font-size: 30px;
+  }
+  img{
+    margin-bottom: 20px;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #A9A9A9;
+
+  }
+}
+.contents{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include sp {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  a{
+    color: #000;
+  }
+}
+#jquery-tab-pager-navi{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+#jquery-tab-pager-navi li a{
+  border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #234872;
+    color: #234872;
+    @include sp {
+      width: 45px;
+      height: 45px;
+    }
+}
+#jquery-tab-pager-navi li a.current, #jquery-tab-pager-navi li a.previos, #jquery-tab-pager-navi li a.next{
+  background-color: #234872;
+  color: #fff;
+}

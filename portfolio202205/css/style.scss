@@ -1,0 +1,532 @@
+$tb: 1024px; // タブレット
+
+@mixin tb {
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+$logo: 1150px; //ロゴの文字の大きさ調整用
+
+@mixin logo {
+    @media (max-width: ($logo)) {
+      @content;
+    }
+}
+
+$sp: 768px; // スマホ
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+$mv: 500px; //ロゴとメイン画像の文字の大きさ調整用
+
+@mixin mv {
+    @media (max-width: ($mv)) {
+      @content;
+    }
+}
+
+/*Sass*/
+/*全体*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.7;
+    letter-spacing: 0.07em;
+    font-family: 'Meiryo', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', system-ui, sans-serif;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.mv_catch{
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    @include sp {
+        padding: 0 20px;
+    }
+
+    h1{
+        font-size: 5.6rem;
+        color: #234872;
+
+        @include tb {
+            font-size: 4.0rem;
+        }
+        @include mv {
+            font-size: 2.4rem;
+        }
+    }
+    p{
+        font-size: 2.4rem;
+        @include tb {
+            font-size: 1.8rem;
+        }
+        @include mv {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+h2{
+    font-size: 4.2rem;
+    color: #234872;
+    font-weight: bold;
+    text-align: center;
+
+    @include tb {
+        font-size: 3.0rem;
+    }
+}
+.h2_sub{
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 80px;
+
+    @include tb {
+        font-size: 1.8rem;
+    }
+}
+
+h3{
+    font-size: 3.0rem;
+    color: #234872;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    @include tb {
+        font-size: 2.4rem;
+    }
+}
+
+.bg_blue{
+    background-color: #F1F6FA;
+    padding: 50px 0;
+}
+
+button{
+    background-color: #234872;
+    color: #fff;
+    font-size: 2.4rem;
+    border-radius: 5px;
+    padding: 15px 25px;
+    @include tb {
+        font-size: 1.8rem;
+    }
+    @include sp {
+        width: 100%;
+    }
+}
+
+.button_pd{
+    button{
+        padding: 15px 80px;
+    }
+}
+
+.wrapper{
+    max-width: 1080px;
+    width: 80%;
+    margin: 0 auto;
+
+    @include tb {
+        width: 90%;
+    }
+}
+.section_mb{
+    margin-bottom: 100px;
+}
+
+header{
+    color: #234872;
+}
+
+.preload{
+    transition:0 !important;
+  }
+
+.header_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    @include tb {
+        display: block;
+    }
+    @include sp {
+        padding: 20px;
+        display: flex;
+    }
+
+    .logo{
+        font-size: 3.6rem;
+        font-weight: bold;
+
+        @include logo {
+            font-size: 2.4rem;
+        }
+
+        @include mv {
+            font-size: 1.8rem;
+        }
+
+        a{
+            color: #234872;
+        }
+    }
+    #hamburger-navigation{
+        @include sp {
+            width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        color: #121212;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        opacity: 0;
+        text-align: left;
+        -webkit-transition: opacity 0.8s ease, visibility 0.8s ease;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        visibility: hidden;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        padding: 180px 30px;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            right: 0px;
+        }
+    }
+    }
+    ul{
+        display: flex;
+        font-size: 2.4rem;
+
+        @include tb {
+            font-size: 1.8rem;
+            justify-content: flex-end;
+        }
+
+        @include sp {
+            font-size: 2.4rem;
+            flex-direction: column;
+        }
+
+        li{
+            margin-left: 4.5rem;
+
+            @include sp {
+                margin-left: 0;
+                border-bottom: 1px solid #234872;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+            }
+
+            a{
+                color: #234872;
+                display: block;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        @include sp {
+        display: block;
+        width: 30px;
+        height: 22px;
+        top: 0;
+        right: 0;
+        z-index: 30;
+        cursor: pointer;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        position: relative;
+    
+        span {
+          width: 30px;
+          height: 2px;
+          background: #234872;
+          position: absolute;
+          -webkit-transition: 0.4s ease-in-out;
+          transition: 0.4s ease-in-out;
+    
+          &:nth-child(1) {
+            top: 0px;
+          }
+    
+          &:nth-child(2) {
+            top: 10px;
+          }
+    
+          &:nth-child(3) {
+            top: 20px;
+          }
+        }
+    
+        &.active {
+          span {
+            &:nth-child(1) {
+              top: 10px;
+              left: 0px;
+              background: #234872;
+              transform: rotate(-45deg);
+            }
+    
+            &:nth-child(2),
+            &:nth-child(3) {
+              top: 10px;
+              background: #234872;
+              transform: rotate(45deg);
+            }
+          }
+        }
+    }
+    }
+}
+    
+    .mv{
+        background-image: url('../img/mv.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 75vh;
+        display: flex;
+    }
+
+
+/*Works*/
+/*スライダー*/
+.slider{
+    display: flex;
+    margin-bottom: 40px;
+
+    .works_card{
+        width: 45%;
+        margin: 0 1%;
+
+        a{
+            color: #000;
+        }
+
+        img{
+            margin-bottom: 20px;
+            height: 350px;
+            object-fit: cover;
+            border: 1px solid #A9A9A9;
+            @include sp {
+                height: 250px;
+            }
+        }
+
+        .works_card_kinds{
+            font-size: 1.8rem;
+        }
+        .works_card_title{
+            font-size: 3.0rem;
+
+            @include tb {
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .slick-prev, .slick-next{
+        width: auto;
+        height: auto;
+    }
+    .slick-prev{
+        left: 0;
+        z-index: 2;
+    }
+    .slick-next{
+        right: 0;
+        z-index: 2;
+    }
+
+    .slick-prev:before,
+    .slick-next:before
+    {
+        color: #000;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .slick-arrow:before{
+        content:"";
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 0;
+        @include sp {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .slick-next:before{
+        background-image: url('../img/arrow_right.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 0;
+      }
+    
+      .slick-prev:before{
+        background-image: url('../img/arrow_left.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 0;
+      }
+}
+
+.button_right{
+    text-align: right;
+}
+.button_center{
+    text-align: center;
+}
+
+.service1,.service2,.service3{
+    display: flex;
+    margin-bottom: 80px;
+
+    img{
+        width: 50%;
+        @include sp {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+    .service_text{
+        padding: 0 40px;
+        margin: auto;
+        @include sp {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+.service1{
+    @include sp {
+        flex-direction: column;
+    }
+}
+.service2{
+    flex-direction: row-reverse;
+    @include sp {
+        flex-direction: column;
+    }
+}
+.service3{
+    margin-bottom: 0;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.about_self{
+    display: flex;
+    margin-bottom: 40px;
+    @include sp {
+        flex-direction: column;
+    }
+
+    .self_img{
+        width: 30%;
+        max-width: 250px;
+        margin-right:80px;
+        @include sp {
+            width: 100%;
+            margin-right: 0;
+            max-width: none;
+            margin-bottom: 40px;
+        }
+    }
+    .self_text{
+        width: 80%;
+        @include sp {
+            width: 100%;
+        }
+    }
+}
+
+.cta_pd{
+    padding: 0;
+}
+
+.cta{
+    text-align: center;
+    padding: 100px 0;
+
+    p{
+        font-size: 2.4rem;
+        color: #234872;
+        font-weight: bold;
+        margin-bottom: 30px;
+
+        @include tb {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+footer{
+    background-color: #234872;
+    text-align: center;
+    padding: 50px 20px;
+
+    ul{
+        font-size: 2.4rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        @include tb {
+            font-size: 1.8rem;
+        }
+        @include sp {
+            flex-direction: column;
+            text-align: left;
+        }
+
+        li{
+            margin-right: 45px;
+            @include sp {
+                margin-right: 0;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+            }
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            a{
+                color: #fff;
+                display: block;
+            }
+        }
+    }
+
+    p{
+        color: #fff;
+        font-size: 14px;
+    }
+}

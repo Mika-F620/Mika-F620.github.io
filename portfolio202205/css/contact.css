@@ -1,0 +1,150 @@
+.contact .contact_text {
+  margin-bottom: 60px;
+}
+
+.contact .contact_item {
+  margin-bottom: 60px;
+}
+
+.contact .contact_item span.hissu {
+  background-color: #234872;
+  padding: 5px 15px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.contact .contact_item input {
+  border: 1px solid #234872;
+  width: 100%;
+  height: 55px;
+  margin-top: 20px;
+}
+
+.contact .contact_item textarea {
+  border: 1px solid #234872;
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact .contact_item textarea {
+    height: 340px;
+  }
+}
+
+.button_contact {
+  width: 380px;
+}
+
+input[type="submit"], .home {
+  color: #fff;
+  cursor: pointer;
+  background-color: #234872;
+  font-size: 2.4rem;
+  border-radius: 5px;
+  padding: 15px 25px;
+  width: 380px;
+}
+
+@media (max-width: 1024px) {
+  input[type="submit"], .home {
+    font-size: 1.8rem;
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  input[type="submit"], .home {
+    width: 100%;
+  }
+}
+
+.home {
+  margin-bottom: 100px;
+}
+
+form {
+  margin-bottom: 100px;
+}
+
+.mw_wp_form_confirm span.hissu {
+  display: none;
+}
+
+.mw_wp_form_confirm .contact_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mw_wp_form_confirm .contact_item label {
+  margin-bottom: 20px;
+}
+
+input.contact_back {
+  background-color: #fff;
+  border: 1px solid #234872;
+  color: #234872;
+  margin-right: 50px;
+}
+
+.mw_wp_form_confirm .button_confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .mw_wp_form_confirm .button_confirm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.contact_confirm_text {
+  display: none;
+}
+
+.mw_wp_form_confirm .contact_confirm_text {
+  display: block;
+  margin-bottom: 60px;
+}
+
+.mw_wp_form_confirm .contact_text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mw_wp_form_confirm input.submit {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mw_wp_form_confirm input.contact_back {
+    margin-right: 0px;
+  }
+}
+
+.contact_complete {
+  margin-bottom: 60px;
+}
+
+.complete_db {
+  display: none;
+}
+
+.mw_wp_form_complete .complete_db {
+  display: block;
+}
+/*# sourceMappingURL=contact.css.map */

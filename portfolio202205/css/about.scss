@@ -1,0 +1,101 @@
+$tb: 1024px; // タブレット
+
+@mixin tb {
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+$sp: 768px; // スマホ
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+.omoi_img{
+    width: 258px;
+    margin: 0 auto 40px;
+}
+.omoi_text{
+    font-size: 18px;
+}
+.skill_first_text{
+  margin-bottom: 40px;
+}
+.skill_img{
+  width: 140px;
+  margin-right: 50px;
+  @include sp {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.skill_list{
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+
+  @include sp {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+.skill_list_title{
+  font-weight: bold;
+}
+.skill_text{
+  width: 80%;
+  @include sp {
+    width: 100%; 
+  }
+}
+.menu{
+  margin-bottom: 100px;
+  .menu_item{
+    border-top: 1px solid #000;
+    &:last-child{
+      border-bottom: 1px solid #000;
+    }
+  }
+  .menu_Q{
+    padding: 15px 20px;
+    position: relative;
+    cursor: pointer;
+
+    @include sp {
+      padding: 15px 20px 15px 10px;
+    }
+
+    &:before{
+      position:absolute;
+      content: '▼';
+      right: 20px;
+
+      @include sp {
+        right: 10px;
+      }
+    }
+    .menu_title{
+      padding-left: 20px;
+      text-indent: -20px;
+      font-weight: bold;
+    }
+    
+  }
+  .menu_Q.active:before{
+    content: '▲';
+  }
+  .menu-content{
+    background-color: #F1F6FA;
+    padding: 15px 20px;
+    display: none;
+    @include sp {
+      padding: 15px 10px;
+    }
+  }
+  .menu-text{
+    padding-left: 20px;
+    text-indent: -20px;
+  }
+}
